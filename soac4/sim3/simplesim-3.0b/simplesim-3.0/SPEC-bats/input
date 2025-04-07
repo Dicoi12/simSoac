@@ -1,0 +1,181 @@
+Re: Inquiring about Spec95
+
+--------------------------------------------------------------------------------
+
+Steve Raasch (sraasch@zip.eecs.umich.edu)
+Sun, 28 Feb 1999 13:09:07 -0500 (EST) 
+
+
+Messages sorted by: [ date ] [ thread ] [ subject ] [ author ] 
+Next message: chulho won: "Asking for list of simplescalar projects" 
+Previous message: ibrahim@fet.ju.edu.jo: "Inquiring about Spec95" 
+Next in thread: Bart Goeman: "Re: Inquiring about Spec95" 
+
+--------------------------------------------------------------------------------
+
+Attached you will find the command lines for the Spec95 INTEGER 
+benchmarks. 
+
+
+Remember that while the binary executables (files with the ".ss" 
+extension) are publicly available, the data files are only available to 
+holders of a Spec license. 
+
+
+I believe that these are correct. If anyone finds a problem with them, 
+please let me know. 
+
+
+
+
+On Sun, 28 Feb 1999 ibrahim@fet.ju.edu.jo wrote: 
+
+
+> Dear Todd: 
+> I would like to ask for the operands/arguments that each Spec95 beanchmark 
+> takes, or where can I find them. I'll be gratefull then. 
+> 
+
+
+
+======================================================================== 
+Steven E. Raasch Graduate Student Research Assistant 
+                                     University of Michigan, Ann Arbor 
+mailto:sraasch@eecs.umich.edu Office: EECS 2001B 
+http://www.eecs.umich.edu/~sraasch (734) 764-9363 
+
+
+
+
+
+
+099.go 
+------ 
+
+Test: go.ss 40 19 null.in 
+Train: go.ss 50 9 2stone9.in 
+Reference: go.ss 50 21 null.in 
+           go.ss 50 21 9stone21.in 
+           go.ss 50 21 5stone21.in 
+
+
+124.m88ksim 
+----------- 
+
+Test: m88ksim.ss -c < ctl.in {uses ctl.raw, dhry.lit} 
+Train: m88ksim.ss -c < ctl.in {uses ctl.raw, dcrand.lit} 
+Reference: m88ksim.ss -c < ctl.in {uses ctl.raw, dcrand.lit, dhry.lit} 
+
+NOTES: The file "ctl.raw" must be modified to indicate the correct endian-ness 
+        of the other file(s) used. 
+
+
+126.gcc 
+------- 
+
+Test: gcc.ss -quiet $FLAGS -O cccp.i -o cccpi.s 
+Train: gcc.ss -quiet $FLAGS -O amptjp.i -o amptjp.s 
+Reference: gcc.ss -quiet $FLAGS -O amptjp.i -o amptjp.s 
+           gcc.ss -quiet $FLAGS -O integrate.i -o integrate.s 
+           gcc.ss -quiet $FLAGS -O c-decl-s.i -o c-decl-s.s 
+           gcc.ss -quiet $FLAGS -O protoize.i -o protoize.s 
+           gcc.ss -quiet $FLAGS -O cccp.i -o cccp.s 
+           gcc.ss -quiet $FLAGS -O recog.i -o recog.s 
+           gcc.ss -quiet $FLAGS -O cp-decl.i -o cp-decl.s 
+           gcc.ss -quiet $FLAGS -O reload1.i -o reload1.s 
+           gcc.ss -quiet $FLAGS -O dbxout.i -o dbxout.s 
+           gcc.ss -quiet $FLAGS -O stmt-protoize.i -o stmt-protoize.s 
+           gcc.ss -quiet $FLAGS -O explow.i -o explow.s 
+           gcc.ss -quiet $FLAGS -O stmt.i -o stmt.s 
+           gcc.ss -quiet $FLAGS -O expr.i -o expr.s 
+           gcc.ss -quiet $FLAGS -O toplev.i -o toplev.s 
+           gcc.ss -quiet $FLAGS -O insn-recog.i -o insn-recog.s 
+           gcc.ss -quiet $FLAGS -O varasm.i -o varasm.s 
+
+NOTES: The $FLAGS are: -funroll-loops -fforce-mem -fcse-follow-jumps -fcse-skip-blocks 
+                        -fexpensive-optimizations -fstrength-reduce -fpeephole 
+                        -fschedule-insns -finline-functions -fschedule-insns2 
+        For the refernece set: each input files is compiled three times. 
+
+
+129.compress 
+------------ 
+
+Test: compress.ss < test.in 
+Train: compress.ss < test.in 
+Reference: compress.ss < bigtest.in 
+
+NOTES: The three input files each contain a single line: 
+                "100 q 2131" 
+                "10000 q 2131" 
+                "14000000 e 2231" 
+
+
+130.li 
+------ 
+
+Test: li.ss test.lsp 
+Train: li.ss train.lsp 
+Reference: li.ss *.lsp {uses au.lsp, deriv.lsp, destrum0.lsp, tak0.lsp, xit.lsp, 
+                                 boyer.lsp, destru0.lsp, browse.lsp, div2.lsp, ctak.lsp, 
+                                 puzzle0.lsp, takr.lsp, dderiv.lsp, triang.lsp} 
+
+NOTES: The reference set runs puzzle0.lst twice and tak0.lsp, destrun0.lsp, and destru0.lsp 
+        three times. 
+
+
+132.ijpeg 
+------ 
+
+Test: ijpeg.ss -image_file specmun.ppm $FLAGS 
+Train: ijpeg.ss -image_file vigo.ppm $FLAGS 
+Reference: ijpeg.ss -image_file penguin.ppm $FLAGS 
+           ijpeg.ss -image_file specmun.ppm $FLAGS 
+           ijpeg.ss -image_file vigo.ppm $FLAGS 
+
+NOTES: $FLAGS are "-compression.quality 90 -compression.optimize_coding 0 
+                    -compression.smoothing_factor 90 -difference.image 1 
+                    -difference.x_stride 10 -difference.y_stride 10 
+                    -verbose 1 -GO.findoptcomp" 
+
+
+134.perl 
+------ 
+
+Test: perl.ss primes.pl < primes.in 
+           perl.ss jumble.pl < jumble.in {uses jumble.dict} 
+Train: perl.ss primes.pl < primes.in 
+           perl.ss jumble.pl < jumble.in {uses jumble.dict} 
+           perl.ss scrabbl.pl < scrabbl.in {uses dictionary} 
+Reference: perl.ss primes.pl < primes.in 
+           perl.ss scrabbl.pl < scrabbl.in {uses dictionary} 
+
+NOTES: For the reference set: the files "primes.in", "scrabbl.in", and "dictionary" 
+        are different from those used for the test and train sets. 
+
+
+147.vortex 
+------ 
+
+Test: vortex.ss vortex.in {uses vortex.raw, lendian.rnv, lendian.wnv, persons.1k} 
+Train: vortex.ss vortex.in {uses vortex.raw, lendian.rnv, lendian.wnv, persons.250} 
+Reference: vortex.ss vortex.in {uses vortex.raw, lendian.rnv, lendian.wnv, persons.1k} 
+
+NOTES: The lendian.rnv and lendian.wnv files are identical for all test sets. 
+       The persons.1k and vortex.raw files differ for all test sets. 
+       The vortex.raw file must be modified to indicate the endian-ness. 
+Nãß≤ÊÏr∏õy˙Ëöÿ^J)©ï‰újV´ô®•äx%äÀlzwfj)mô®Ë≠⁄&°À0ä«vÏ"∂ay˙%ñå"ûß∂¶zÀÅÎ^∫{.n«+â∑¨äjez«ï™Ó±ÍÁ>∫ïÈ¨IÈ›ô®•∂ã"öô^±∆•j∫0ùÍ‹≥¨qÁn
+
+
+
+
+--------------------------------------------------------------------------------
+
+
+Next message: chulho won: "Asking for list of simplescalar projects" 
+Previous message: ibrahim@fet.ju.edu.jo: "Inquiring about Spec95" 
+Next in thread: Bart Goeman: "Re: Inquiring about Spec95" 
+
+--------------------------------------------------------------------------------
+
+This archive was generated by hypermail 2b12 : Thu Jun 21 2001 - 14:15:12 EDT 

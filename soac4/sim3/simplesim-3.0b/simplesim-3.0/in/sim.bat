@@ -1,0 +1,1 @@
+sim-inst.exe -redir:sim simout.res -redir:prog progout.res -memaddr 0 -history 16 -max:inst 5000000 apsi.ss < apsi.in

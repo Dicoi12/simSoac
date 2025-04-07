@@ -1,0 +1,39 @@
+ Version: %Z%
+           Initial residual norms
+
+ 
+ RMS-norm of steady-state residual for first pde  =  1.82813E+05
+ RMS-norm of steady-state residual for second pde =  1.92746E+04
+ RMS-norm of steady-state residual for third pde  =  4.74282E+04
+ RMS-norm of steady-state residual for fourth pde =  4.01384E+04
+ RMS-norm of steady-state residual for fifth pde  =  2.53626E+05
+ 
+     pseudo-time SSOR iteration no.= 200
+
+ 
+ RMS-norm of SSOR-iteration correction for first pde  =  1.69479E-02
+ RMS-norm of SSOR-iteration correction for second pde =  1.78133E-03
+ RMS-norm of SSOR-iteration correction for third pde  =  3.63792E-03
+ RMS-norm of SSOR-iteration correction for fourth pde =  3.32912E-03
+ RMS-norm of SSOR-iteration correction for fifth pde  =  3.84906E-02
+ 
+ RMS-norm of steady-state residual for first pde  =  1.45719E+01
+ RMS-norm of steady-state residual for second pde =  1.54455E+00
+ RMS-norm of steady-state residual for third pde  =  3.08771E+00
+ RMS-norm of steady-state residual for fourth pde =  2.82024E+00
+ RMS-norm of steady-state residual for fifth pde  =  3.32610E+01
+ 
+ RMS-norm of error in soln. to first pde  =  5.74185E-01
+ RMS-norm of error in soln. to second pde =  5.94814E-02
+ RMS-norm of error in soln. to third pde  =  1.12881E-01
+ RMS-norm of error in soln. to fourth pde =  1.04271E-01
+ RMS-norm of error in soln. to fifth pde  =  1.27771E+00
+
+
+     surface integral =  1.10585E+01
+
+
+
+
+ FOR THE PROBLEM PARAMETERS IN USE NO REFERENCE VALUES ARE PROVIDED
+ IN THE CURRENT VERIFICATION ROUTINE - NO VERIFIACTION TEST WAS PERFORMED

@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "vpred.h": "c",
+        "spred.h": "c"
+    }
+}

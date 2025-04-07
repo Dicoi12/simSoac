@@ -1,0 +1,2 @@
+./sim-spred -redir:sim applusimout{parametru 128/256/512/1024}.res -lvpt 128-1024 -assoc {0-dirrect mapped| 1-associative} -contextual 0 -max:inst 50000000 ./in/applu.ss < ./in/applu.in
+apsi swim tomcatv wave5

@@ -1,0 +1,58 @@
+ Version: %Z%
+           Initial residual norms
+
+ 
+ RMS-norm of steady-state residual for first pde  =  6.78774E+04
+ RMS-norm of steady-state residual for second pde =  6.86567E+03
+ RMS-norm of steady-state residual for third pde  =  1.73739E+04
+ RMS-norm of steady-state residual for fourth pde =  1.46532E+04
+ RMS-norm of steady-state residual for fifth pde  =  9.76824E+04
+ 
+     pseudo-time SSOR iteration no.=  50
+
+ 
+ RMS-norm of SSOR-iteration correction for first pde  =  1.80206E-04
+ RMS-norm of SSOR-iteration correction for second pde =  2.25638E-05
+ RMS-norm of SSOR-iteration correction for third pde  =  1.68644E-05
+ RMS-norm of SSOR-iteration correction for fourth pde =  1.69189E-05
+ RMS-norm of SSOR-iteration correction for fifth pde  =  3.75785E-04
+ 
+ RMS-norm of steady-state residual for first pde  =  1.61963E-02
+ RMS-norm of steady-state residual for second pde =  2.19767E-03
+ RMS-norm of steady-state residual for third pde  =  1.51799E-03
+ RMS-norm of steady-state residual for fourth pde =  1.50296E-03
+ RMS-norm of steady-state residual for fifth pde  =  3.42641E-02
+ 
+ RMS-norm of error in soln. to first pde  =  6.42233E-04
+ RMS-norm of error in soln. to second pde =  8.41443E-05
+ RMS-norm of error in soln. to third pde  =  5.85883E-05
+ RMS-norm of error in soln. to fourth pde =  5.84742E-05
+ RMS-norm of error in soln. to fifth pde  =  1.31033E-03
+
+
+     surface integral =  7.84189E+00
+
+
+
+     VERIFICATION TEST FOR RESIDUALS IS SUCCESSFUL
+
+     VERIFICATION TEST FOR SOLUTION ERRORS IS SUCCESSFUL
+
+     VERIFICATION TEST FOR SURFACE INTEGRAL IS SUCCESSFUL
+
+
+          CAUTION
+
+     REFERENCE VALUES CURRENTLY IN THIS VERIFICATION ROUTINE 
+     ARE VALID ONLY FOR RUNS WITH THE FOLLOWING PARAMETER VALUES:
+
+     NX = 12;  NY = 12;  NZ = 12 
+
+     ITMAX = 50
+
+     DT = 5.0d-01
+
+     OMEGA = 1.2
+
+     CHANGE IN ANY OF THE ABOVE VALUES RENDER THE REFERENCE VALUES 
+     INVALID AND CAUSES A FAILURE OF THE VERIFICATION TEST.

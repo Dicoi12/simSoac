@@ -1,0 +1,1 @@
+sim-bpred -redir:sim apsi_simout.res -redir:prog apsi_progout.res -max:inst 500000000 -nice 1 -bpred 1lev -bpred:1lev 32 4 apsi.ss < apsi.in

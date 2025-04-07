@@ -1,0 +1,1 @@
+sim-bpred -redir:sim li_simout.res -redir:prog li_progout.res -max:inst 500000000 -nice 1 -bpred 1lev -bpred:1lev 32 4 li.ss *.lsp {uses au.lsp, deriv.lsp, destrum0.lsp, tak0.lsp, xit.lsp, boyer.lsp, destru0.lsp, browse.lsp, div2.lsp, ctak.lsp, puzzle0.lsp, takr.lsp, dderiv.lsp, triang.lsp}

@@ -1,0 +1,1 @@
+sim-bpred -redir:sim swim_simout.res -redir:prog swim_progout.res -max:inst 500000000 -nice 1 -bpred 1lev -bpred:1lev 32 4 swim.ss < swim.in

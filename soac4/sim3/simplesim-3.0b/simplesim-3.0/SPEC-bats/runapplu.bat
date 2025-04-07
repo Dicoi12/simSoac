@@ -1,0 +1,1 @@
+sim-bpred -redir:sim applu_simout.res -redir:prog applu_progout.res -max:inst 500000000 -nice 1 -bpred 1lev -bpred:1lev 512 4 applu.ss < applu.in

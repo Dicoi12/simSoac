@@ -1,0 +1,6 @@
+XLISP version 1.6, Copyright (c) 1985, by David Betz
+; loading "train.lsp"
+(IMPLIES (AND (IMPLIES (F (PLUS (PLUS A B) (PLUS C (ZERO)))) (F (TIMES (TIMES A B) (PLUS C D)))) (IMPLIES (F (TIMES (TIMES A B) (PLUS C D))) (F (REVERSE (APPEND (APPEND A B) (NIL)))))) (IMPLIES (F (PLUS (PLUS A B) (PLUS C (ZERO)))) (F (REVERSE (APPEND (APPEND A B) (NIL))))))
+NIL
+(DONE BOYER-TEST)
+(ALL DONE)

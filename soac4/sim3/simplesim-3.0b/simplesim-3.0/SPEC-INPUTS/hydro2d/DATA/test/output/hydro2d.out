@@ -1,0 +1,90 @@
+  ISTEP      =                    2
+  ISTOR      =                  100
+  MPROW      =                  300
+  NPROW      =                    1
+  NEGFL      =                    0
+  NEGCN      =                 1000
+  CFL        =           0.7500000000000000
+  VCT        =           0.5000000000000000
+  MQFLG     =                    0
+  NQFLG     =                    0
+  ZL         =         O
+  ZU         =         O
+  RL         =         C
+  RU         =         O
+
+
+
+
+      CONTROL VARIABLES OF MODEL NO.:            2
+
+
+
+      TOTAL TIME:            TS =  5.337271659E-05
+      LAST TIMESTEP:         DT =  3.558181106E-05
+
+
+
+      GRIDSPACING:           TZ =  7.500000000E-02
+                             TR =  5.000000000E-02
+                            BSZ =  1.000000000E+00
+                            BSR =  1.000000000E+00
+                            QTZ =  1.000000000E+00
+                            QTR =  1.000000000E+00
+
+
+
+      GAMMA:                GAM =  1.666666667E+00
+
+
+
+      COURANT FACTOR:       CFL =  7.500000000E-01
+      VISCOSITY FACTOR:     VCT =  5.000000000E-01
+
+
+
+      ADVECTION LENGTH:      MQ =              402
+                             NQ =              160
+
+
+
+      TOTAL MASS:         TOTMA =  7.680182915E+02
+      TOTAL ENERGY:       TOTEN =  8.696791637E+02
+      TOTAL Z-MOMENTUM:   TOTGZ =  1.432235247E-01
+
+
+
+
+      DENSITY MIN:        ROMIN =  1.000000000E-01
+      ENERGY MIN:         ENMIN =  9.000000000E-01
+      Z-MOMENTUM MIN:     GZMIN = -9.793102687E-14
+      R-MOMENTUM MIN:     GRMIN = -3.979372776E-03
+
+
+
+
+      DENSITY MAX:        ROMAX =  1.000000063E+00
+      ENERGY MAX:         ENMAX =  1.893520035E+01
+      Z-MOMENTUM MAX:     GZMAX =  1.897363766E+00
+      R-MOMENTUM MAX:     GRMAX =  3.787139299E-03
+1
+
+
+
+
+      NORMAL PROGRAM STOP
+
+      AT TIMESTEP NO.     :           2
+      TOTAL TIME IS       :   5.337E-05
+      CURRENT TIMESTEP IS :   3.558E-05
+
+
+           2 TIMESTEPS HAVE BEEN COMPUTED
+           1 TIMESTEPS HAVE BEEN STORED
+           2 TIMESTEPS HAVE BEEN PRINTED
+           0 TIMESTEPS HAVE BEEN CANCELED
+
+
+
+
+      STOP IN ROUTINE:   TERM

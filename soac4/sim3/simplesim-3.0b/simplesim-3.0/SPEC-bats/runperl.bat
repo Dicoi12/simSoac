@@ -1,0 +1,1 @@
+sim-bpred.exe -redir:sim perl_simout.res -redir:prog perl_progout.res -max:inst 500000000 -nice 1 -bpred 1lev -bpred:1lev 32 4 perl.ss scrabbl.pl < scrabbl.in {uses dictionary}

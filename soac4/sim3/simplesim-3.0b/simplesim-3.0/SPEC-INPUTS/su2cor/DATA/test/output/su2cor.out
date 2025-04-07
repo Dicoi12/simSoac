@@ -1,0 +1,38 @@
+ SPEC benchmark 103.su2cor
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ PROGRAM SU2V1COR -- MODIFIED HEAT BATH ALGORITHM
+    -- VECTORIZED PROGRAM IN STANDARD FORTRAN
+    -- GLUEBALL CORRELATIONS FOR 1X1 AND 2X2 LOOP OPERATORS
+    -- INTEGRAL EXPRESSIONS FOR LOOP OPERATORS USED
+
+
+ DIMENSION =  4
+ SIZE      =  8  8  8 16
+
+
+ VECTOR LENGTH:      512
+ IN SWEEP:  MAXATT =   5
+ IN BESTAB: NSTEPS = 200      ERROR  =  0.100E-07
+ IN INT4:   NDMAX4 =   8      ERROR4 =  0.100E-06
+ IN INT2:   NDMAX2 =  10      ERROR2 =  0.100E-06
+
+
+ RANDOM START
+
+
+ ---------------------------------------------------------------------------
+ BETA  =  2.4000
+
+ CLEAR COUNTERS
+
+ THERMALISATION:     0 ITERATIONS
+ MEASUREMENT   :     2 ITERATIONS
+
+ FREQUENCY OF CORRELATION MEASUREMENTS:    2 ITERATION(S)
+
+ SAVE FREQUENCY:   100 ITERATIONS, UNIT = 10
+
+                             E               FUNDAMENTAL POLYAKOV LINE AVERAGES
+   ITER   ACPT      CURRENT     AVERAGE        1         2         3         4
+      2  0.8910    0.691923    0.748907    0.000000  0.000000  0.000000  0.000000

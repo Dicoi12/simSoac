@@ -1,0 +1,7 @@
+lo dhry.%endian%
+cacheoff
+br _exit
+g
+g
+sd
+q

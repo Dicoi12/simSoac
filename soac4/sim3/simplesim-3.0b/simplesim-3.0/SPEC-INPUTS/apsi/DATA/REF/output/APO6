@@ -1,0 +1,262 @@
+
+
+
+
+          *********************************************************
+          *********************************************************
+          *** PROGRAM TO  SOLVE FOR THE  MESOSCALE AND SYNOPTIC ***
+          *** VARIATIONS OF POTENTIAL TEMPERATURE, U AND V WIND ***
+          *** COMPONENTS, AND THE MESOSCALE VERTICAL VELOCITY W ***
+          *** PRESSURE AND DISTRIBUTION OF POLLUTANTS C  HAVING ***
+          *** SOURCES  Q. THE SYNOPTIC  SCALE COMPONENTS ARE IN ***
+          *** QUASSI-STEADY STATE BALANCE,  WHILE THE MESOSCALE ***
+          *** PRESSURE AND VELOCITY  W ARE FOUND DIAGNOSTICALLY ***
+          *********************************************************
+          *********************************************************
+
+
+
+
+------------------------------------------------!
+  ***  D A T A   F O R   M E S O - R U N  ***   !
+------------------------------------------------!
+              INTEGER CONSTANTS                 !
+------------------------------------------------!
+     L E G E N T             !   V A L U E      !
+------------------------------------------------!
+------------------------------------------------!
+             REAL CONSTANTS                     !
+------------------------------------------------!
+     L E G E N T             !   V A L U E      !
+------------------------------------------------!
+
+ FOR LINEAR STABILITY,  UMAX < 15.41  VMAX <   .00
+
+ ** TOTAL SIMULATION PERIOD   115200.0S, = 32.00 HOURS **
+ ** HEAT AMPLITUDE  11.00 K,    LAG = 14.00(H),   BIAS A     .1
+
+
+ ********   LAND SURFACE FORCING  FUNCTION ********* 
+
+ T(X,Y,T)= 11.0{EXP -((T-14.0)/ 4.9)**2 -  .1}
+
+ ********   TIME UNITS ARE IN HOURS        *********
+
+ WORK ARRAY HAS   267810 ELEMENTS.  
+
+
+ ACTUAL SOURCE VALUE    .1106E+00 AT GRID POINTS I,J,K   15   1   1
+ ACTUAL SOURCE VALUE    .1107E+00 AT GRID POINTS I,J,K   16   1   1
+ ACTUAL SOURCE VALUE    .1106E+00 AT GRID POINTS I,J,K   17   1   1
+ ACTUAL SOURCE VALUE    .1120E+00 AT GRID POINTS I,J,K   15   1   2
+ ACTUAL SOURCE VALUE    .1121E+00 AT GRID POINTS I,J,K   16   1   2
+ ACTUAL SOURCE VALUE    .1120E+00 AT GRID POINTS I,J,K   17   1   2
+ ACTUAL SOURCE VALUE    .1106E+00 AT GRID POINTS I,J,K   15   1   3
+ ACTUAL SOURCE VALUE    .1107E+00 AT GRID POINTS I,J,K   16   1   3
+ ACTUAL SOURCE VALUE    .1106E+00 AT GRID POINTS I,J,K   17   1   3
+
+
+
+ ***********************  MEAN PROFILES ***********************
+
+ CONVERGENCE AFTER     34 ITERATIONS.    NORM=    .0000E+00
+ EQUIVALENT TIME FOR THE MEAN PROFILES  IS    2040.00 SEC. 
+ Z0=   .0200   ZMIX= 338.43   U*=   .07932   L(4)=      246.94
+
+
+   K    HEIGHT (M)       UG(Z)     VG(Z)      TM(Z)       KM(Z)       UM(Z)       VM(Z)  
+
+   1        .00          6.88       .00      290.13         .10         .00         .00
+   2       6.52          6.88       .00      290.14         .23         .42         .85
+   3      13.39          6.88       .00      290.16         .39         .65        1.23
+   4      20.64          6.88       .00      290.18         .51         .83        1.47
+   5      28.28          6.88       .00      290.20         .60        1.00        1.65
+   6      36.34          6.89       .00      290.23         .66        1.17        1.80
+   7      44.84          6.89       .00      290.26         .69        1.35        1.93
+   8      53.79          6.89       .00      290.30         .74        1.54        2.05
+   9      63.24          6.89       .00      290.34         .80        1.74        2.15
+  10      73.19          6.89       .00      290.38         .85        1.94        2.23
+  11      83.69          6.89       .00      290.42         .89        2.14        2.31
+  12      94.76          6.89       .00      290.47         .92        2.36        2.39
+  13     106.42          6.89       .00      290.52         .93        2.58        2.45
+  14     118.73          6.90       .00      290.58         .93        2.82        2.52
+  15     131.70          6.90       .00      290.64         .92        3.07        2.57
+  16     145.37          6.90       .00      290.71         .89        3.33        2.62
+  17     159.79          6.90       .00      290.78         .84        3.60        2.66
+  18     175.00          6.90       .00      290.85         .78        3.88        2.69
+  19     191.02          6.90       .00      290.93         .70        4.17        2.70
+  20     207.92          6.91       .00      291.02         .61        4.46        2.70
+  21     225.74          6.91       .00      291.11         .52        4.76        2.68
+  22     244.53          6.91       .00      291.21         .41        5.05        2.64
+  23     264.33          6.91       .00      291.31         .31        5.34        2.59
+  24     285.22          6.92       .00      291.42         .22        5.61        2.51
+  25     307.23          6.92       .00      291.53         .15        5.87        2.42
+  26     330.45          6.92       .00      291.65         .11        6.12        2.32
+  27     354.92          6.92       .00      291.77         .10        6.35        2.20
+  28     380.73          6.93       .00      291.90         .10        6.56        2.06
+  29     407.94          6.93       .00      292.04         .10        6.76        1.92
+  30     436.62          6.93       .00      292.18         .10        6.93        1.76
+  31     466.86          6.94       .00      292.33         .10        7.09        1.59
+  32     498.75          6.94       .00      292.49         .10        7.22        1.42
+  33     532.37          6.94       .00      292.66         .10        7.33        1.25
+  34     567.82          6.95       .00      292.84         .10        7.42        1.07
+  35     605.19          6.95       .00      293.03         .10        7.48         .90
+  36     644.59          6.96       .00      293.22         .10        7.52         .73
+  37     686.14          6.96       .00      293.43         .10        7.53         .57
+  38     729.94          6.97       .00      293.65         .10        7.53         .42
+  39     776.12          6.97       .00      293.88         .10        7.51         .29
+  40     824.81          6.98       .00      294.12         .10        7.47         .18
+  41     876.15          6.99       .00      294.38         .10        7.42         .08
+  42     930.27          6.99       .00      294.65         .10        7.37         .01
+  43     987.34          7.00       .00      294.94         .10        7.31        -.05
+  44    1047.50          7.01       .00      295.24         .10        7.25        -.09
+  45    1110.94          7.01       .00      295.55         .10        7.20        -.11
+  46    1177.82          7.02       .00      295.89         .10        7.15        -.12
+  47    1248.34          7.03       .00      296.24         .10        7.11        -.12
+  48    1322.69          7.04       .00      296.61         .10        7.08        -.10
+  49    1401.08          7.05       .00      297.01         .10        7.06        -.09
+  50    1483.73          7.06       .00      297.42         .10        7.05        -.07
+  51    1570.86          7.07       .00      297.85         .10        7.05        -.05
+  52    1662.74          7.08       .00      298.31         .10        7.05        -.03
+  53    1759.60          7.09       .00      298.80         .10        7.07        -.01
+  54    1861.73          7.10       .00      299.31         .10        7.08         .00
+  55    1969.40          7.12       .00      299.85         .10        7.10         .00
+  56    2082.93          7.13       .00      300.41         .10        7.12         .00
+  57    2202.63          7.14       .00      301.01         .10        7.14         .01
+  58    2328.83          7.16       .00      301.64         .10        7.16         .00
+  59    2461.88          7.17       .00      302.31         .10        7.17         .00
+  60    2602.17          7.19       .00      303.01         .10        7.19         .00
+  61    2750.08          7.21       .00      303.75         .10        7.21         .00
+  62    2906.02          7.23       .00      304.53         .10        7.23         .00
+  63    3070.44          7.25       .00      305.35         .10        7.25         .00
+  64    3243.79          7.27       .00      306.22         .10        7.27         .00
+
+ **************************************************************
+
+
+ ****************  X - FILTER  ***************** 
+
+ 0000000000000000000000000000000000000000000000000000000000000000
+ 0000000000000000000000000000000011223457800000000000000000000000
+ 0000000000000000000000087543221100000000000000000000000000000000
+ 0000000000000000000000000000000000000000000000000000000000000000
+
+
+            ****   TOPOGRAPHY  MAX =       1.00 MIN =      -1.00  METERS   ****
+
+
+ LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+ LLLLLLLLLLLLLLLLLLLLLLWWWWWWWWWWWCLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+ LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+ LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+
+
+
+
+
+
+                  SOLVING THE EQUATION 
+   DC/DT=U*DC/DX+V*DC/DY+KX*D2C/DX2+KY*DC/DY+D(KZ*DC/DZ)/DZ + Q,
+   WHERE C(X,Y,Z,T0)=0 WITH PERIODIC BOUNDARY CONDITIONS IN    X,Y
+   AND FLUX VERTICAL BOUNDARY CONDITIONS. 
+
+
+
+
+   X AXIS IS DIVIDED INTO  256  SUBINTERVALS
+   Y AXIS IS DIVIDED INTO    1  SUBINTERVALS
+   Z AXIS IS DIVIDED INTO   64  SUBINTERVALS
+         960  TIME STEPS WERE REQUESTED 
+
+
+  BATCH MODE = NO       SPECTRAL FILTER       STRECHED Z, Z=F(H)  
+
+   Z=120.0*(EXP(H/  .3)-1),  UPWIND A=  .5
+
+
+    FOLLOWING NUMBERS ARE IN USER WORLD UNITS
+
+
+   X  DOMAIN  (       .0,2040000.0),    DX=  8000.00
+   Y  DOMAIN  (       .0,       .0),    DY=  5000.00
+   Z  DOMAIN  (       .0,    410.8),    DZ=     6.52
+   T  DOMAIN  (       .0, 115080.0),    DT=   120.00
+
+   CENTRAL LATITUDE  40.00 DEG,    GRAPH STEP 720
+
+
+  DIFFUSIVITIES   (KX,KY,KZ) = (   7000.00   1000.00       .10)
+
+ ** TIME SCHEMES USED **  LEAP  FROG 2ND IN X,Y  CRANK-NICKOLSON IN Z
+
+ T(     0)=      .0  FUM=  .1000E+01  E=  .0000E+00  T=  .0000E+00  P=  .0000E+00
+        TS= 290.13    U=  .0000E+00  V=  .0000E+00  W=  .0000E+00
+ T(   100)= 12000.0  FUM=  .8300E+04  E=  .1755E+04  T= -.1250E+04  P= -.7254E+01
+        TS= 289.12    U=  .3517E+03  V=  .7605E+03  W= -.4447E-03
+ T(   200)= 24000.0  FUM=  .1157E+05  E=  .1119E+04  T= -.5134E+03  P=  .3695E+00
+        TS= 290.17    U=  .1230E+04  V= -.7326E+03  W= -.3262E-03
+ T(   300)= 36000.0  FUM=  .9872E+04  E=  .9914E+04  T=  .9524E+04  P= -.8855E+02
+        TS= 294.61    U= -.1672E+04  V= -.1769E+04  W=  .2728E-02
+ T(   400)= 48000.0  FUM=  .9134E+04  E=  .2223E+05  T=  .3727E+05  P= -.1165E+04
+        TS= 299.81    U= -.4223E+04  V=  .2237E+04  W=  .6101E-02
+ T(   500)= 60000.0  FUM=  .1045E+05  E=  .2914E+05  T=  .4912E+05  P= -.2091E+04
+        TS= 297.27    U= -.1182E+04  V=  .7596E+04  W=  .6160E-02
+ T(   600)= 72000.0  FUM=  .1839E+05  E=  .2684E+05  T=  .4468E+05  P= -.2113E+04
+        TS= 291.52    U=  .6698E+04  V=  .6997E+04  W=  .8952E-03
+ T(   700)= 84000.0  FUM=  .2577E+05  E=  .2993E+05  T=  .4048E+05  P= -.2113E+04
+        TS= 289.33    U=  .1051E+05  V= -.1438E+04  W=  .9429E-03
+
+
+
+
+
+
+                  SOLVING THE EQUATION 
+   DC/DT=U*DC/DX+V*DC/DY+KX*D2C/DX2+KY*DC/DY+D(KZ*DC/DZ)/DZ + Q,
+   WHERE C(X,Y,Z,T0)=0 WITH PERIODIC BOUNDARY CONDITIONS IN    X,Y
+   AND FLUX VERTICAL BOUNDARY CONDITIONS. 
+
+
+
+
+   X AXIS IS DIVIDED INTO  256  SUBINTERVALS
+   Y AXIS IS DIVIDED INTO    1  SUBINTERVALS
+   Z AXIS IS DIVIDED INTO   64  SUBINTERVALS
+         960  TIME STEPS WERE REQUESTED 
+
+
+  BATCH MODE = NO       SPECTRAL FILTER       STRECHED Z, Z=F(H)  
+
+   Z=120.0*(EXP(H/  .3)-1),  UPWIND A=  .5
+
+
+    FOLLOWING NUMBERS ARE IN USER WORLD UNITS
+
+
+   X  DOMAIN  (       .0,2040000.0),    DX=  8000.00
+   Y  DOMAIN  (       .0,       .0),    DY=  5000.00
+   Z  DOMAIN  (       .0,    410.8),    DZ=     6.52
+   T  DOMAIN  (       .0, 115080.0),    DT=   120.00
+
+   CENTRAL LATITUDE  40.00 DEG,    GRAPH STEP 720
+
+
+  DIFFUSIVITIES   (KX,KY,KZ) = (   7000.00   1000.00       .10)
+
+ ** TIME SCHEMES USED **  LEAP  FROG 2ND IN X,Y  CRANK-NICKOLSON IN Z
+
+ T(   800)=  9480.0  FUM=  .3259E+05  E=  .3127E+05  T=  .3803E+05  P= -.2111E+04
+        TS= 289.08    U=  .4261E+04  V= -.9175E+04  W=  .1228E-02
+ T(   900)= 21480.0  FUM=  .3899E+05  E=  .2842E+05  T=  .3691E+05  P= -.2111E+04
+        TS= 289.76    U= -.5898E+04  V= -.6988E+04  W=  .1595E-03
+ **      CPU FOR CONCENTRATIONS  C =            .00   **
+ **      CPU FOR TEMPERATURE THETA =            .00   **
+ **      CPU FOR EXNER PRESSURE PI =            .00   **
+ **      CPU FOR X MOMENTUM EQ.  U =            .00   **
+ **      CPU FOR Y MOMENTUM EQ.  V =            .00   **
+ **      CPU FOR CONTINUITY EQ.  W =            .00   **
+ **      CPU FOR PRINTING UNKNOWNS =            .00   **
+ **      CPU FOR  BOUNDARY   LAYER =            .00   **
+ **      CPU FOR HIGH  PASS FILTER =            .00   **
+ **      CPU FOR SYNOPTIC VARIABLS =            .00   **
+ **                                                   **
